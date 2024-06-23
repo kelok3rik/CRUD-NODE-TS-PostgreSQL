@@ -1,13 +1,14 @@
-// src/app.ts
-
 import express from 'express';
-import bodyParser from 'body-parser';
+import cors from 'cors';
 import { avesRouter } from './routes/AveRoutes';
 
 const app = express();
 
+// Habilitar CORS
+app.use(cors());
+
 // Middleware para parsear solicitudes JSON
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Rutas
 app.use('/aves', avesRouter);

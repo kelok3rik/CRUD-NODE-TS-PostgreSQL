@@ -1,4 +1,4 @@
-// src/routes/avesRoutes.ts
+
 
 import { Router } from 'express';
 import { AvesController } from '../controllers/AveController';
