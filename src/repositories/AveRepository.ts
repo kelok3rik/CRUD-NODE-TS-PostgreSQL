@@ -1,11 +1,5 @@
-// src/repositories/avesRepository.ts
-
-
 import { Ave } from '../models/Ave';
 import pool from '../db/dbconfig';
-
-
-
 export class AvesRepository {
   async getAll(): Promise<Ave[]> {
     const { rows } = await pool.query('SELECT * FROM aves');
@@ -18,6 +12,7 @@ export class AvesRepository {
   }
 
   async create(ave: Ave): Promise<Ave> {
+    console.log(ave);
     const {
       fecha_nacimiento, placa, color_placa, color, tusa,
       numero_placa_coliseo, marca, sexo, padre_id, madre_id

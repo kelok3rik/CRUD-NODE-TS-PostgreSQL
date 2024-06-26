@@ -13,3 +13,5 @@ export interface Ave {
     padre_id?: number;
     madre_id?: number;
 }
+
+
